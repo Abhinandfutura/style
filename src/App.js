@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar1 from './Components/Navbar1';
+import styled from 'styled-components'
 
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Container className="App">
+    <BrowserRouter>
+    <Routes>
+<Route path='/' element={<Navbar1/>}  />
+
+    </Routes>
+    
+    </BrowserRouter>
+      
+    </Container>
   );
 }
 
+
+const Container=styled.div`
+    
+    background: #62b262;
+    height: 100vh;
+`
 export default App;
